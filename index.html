@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive business analytics dashboard.">
+  <title>Northstar Analytics</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark">N</span>
+        <span>northstar</span>
+      </div>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview">
+          <span class="nav-icon">⌂</span>
+          Overview
+        </a>
+        <a class="nav-item" href="#analytics">
+          <span class="nav-icon">⌁</span>
+          Analytics
+        </a>
+        <a class="nav-item" href="#orders">
+          <span class="nav-icon">▤</span>
+          Orders
+          <span class="nav-count">12</span>
+        </a>
+        <a class="nav-item" href="#customers">
+          <span class="nav-icon">♙</span>
+          Customers
+        </a>
+        <a class="nav-item" href="#reports">
+          <span class="nav-icon">▥</span>
+          Reports
+        </a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="nav-item" href="#settings">
+          <span class="nav-icon">⚙</span>
+          Settings
+        </a>
+        <div class="help-card">
+          <span class="help-icon">?</span>
+          <div>
+            <strong>Need a hand?</strong>
+            <small>Visit our help center</small>
+          </div>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="profile">
+          <div class="avatar">AM</div>
+          <div>
+            <strong>Alex Morgan</strong>
+            <small>Administrator</small>
+          </div>
+          <button class="profile-more" aria-label="Open profile menu">•••</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb">
+          <span>Workspace</span>
+          <b>/</b>
+          <strong>Overview</strong>
+        </div>
+        <div class="header-actions">
+          <button class="icon-button" id="themeToggle" aria-label="Switch to light mode">☼</button>
+          <button class="notification" aria-label="3 unread notifications">
+            ♢
+            <i>3</i>
+          </button>
+          <div class="mini-avatar">AM</div>
+        </div>
+      </header>
+
+      <section class="welcome-row">
+        <div>
+          <p class="eyebrow">Wednesday, August 26, 2026</p>
+          <h1>Good morning, Alex <span>✦</span></h1>
+          <p class="subheading">Here’s what’s happening with your business today.</p>
+        </div>
+        <button class="date-button" id="dateButton">
+          Last 30 days
+          <span>⌄</span>
+        </button>
+      </section>
+
+      <section class="metrics-grid" aria-label="Key performance metrics">
+        <article class="metric-card featured">
+          <div class="metric-top">
+            <span class="metric-label">Total revenue</span>
+            <span class="metric-icon">↗</span>
+          </div>
+          <strong class="metric-value">$128,430</strong>
+          <div class="metric-change positive">
+            <span>↑ 12.8%</span>
+            <small>vs. last month</small>
+          </div>
+          <div class="sparkline revenue-spark"></div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-top">
+            <span class="metric-label">Total customers</span>
+            <span class="metric-icon blue">♙</span>
+          </div>
+          <strong class="metric-value">8,249</strong>
+          <div class="metric-change positive">
+            <span>↑ 8.4%</span>
+            <small>vs. last month</small>
+          </div>
+          <div class="metric-visual customers-visual">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-top">
+            <span class="metric-label">Total orders</span>
+            <span class="metric-icon orange">▤</span>
+          </div>
+          <strong class="metric-value">1,426</strong>
+          <div class="metric-change positive">
+            <span>↑ 5.6%</span>
+            <small>vs. last month</small>
+          </div>
+          <div class="order-ring">
+            <div>
+              <b>1,426</b>
+              <small>orders</small>
+            </div>
+          </div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-top">
+            <span class="metric-label">Conversion rate</span>
+            <span class="metric-icon purple">⌁</span>
+          </div>
+          <strong class="metric-value">6.84%</strong>
+          <div class="metric-change negative">
+            <span>↓ 1.2%</span>
+            <small>vs. last month</small>
+          </div>
+          <div class="conversion-bars">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid" id="analytics">
+        <article class="panel sales-panel"><div class="panel-heading"><div><p class="eyebrow">Performance</p><h2>Sales overview</h2></div><div class="chart-legend"><span><i class="legend-dot teal"></i>Revenue</span><span><i class="legend-dot yellow"></i>Orders</span><button class="period-select">Monthly ⌄</button></div></div><div class="chart-wrap"><div class="y-axis"><span>$150k</span><span>$100k</span><span>$50k</span><span>$0</span></div><svg class="sales-chart" viewBox="0 0 700 250" role="img" aria-label="Revenue and orders sales chart"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16b8a6" stop-opacity=".24"/><stop offset="1" stop-color="#16b8a6" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0,192 C30,184 44,153 76,164 S115,142 145,151 S190,90 220,116 S260,98 290,119 S330,88 365,99 S408,54 438,83 S481,71 510,92 S550,36 580,57 S615,42 650,52 S680,20 700,27 V250 H0Z"/><path class="chart-line teal-line" d="M0,192 C30,184 44,153 76,164 S115,142 145,151 S190,90 220,116 S260,98 290,119 S330,88 365,99 S408,54 438,83 S481,71 510,92 S550,36 580,57 S615,42 650,52 S680,20 700,27"/><path class="chart-line yellow-line" d="M0,210 C38,215 48,183 76,194 S120,175 145,187 S185,155 220,172 S257,151 290,173 S330,134 365,151 S405,123 438,144 S475,115 510,135 S550,98 580,120 S615,92 650,109 S680,78 700,91"/><circle class="chart-point" cx="580" cy="57" r="5"/><g class="chart-grid"><line x1="0" y1="0" x2="700" y2="0"/><line x1="0" y1="62" x2="700" y2="62"/><line x1="0" y1="125" x2="700" y2="125"/><line x1="0" y1="187" x2="700" y2="187"/></g></svg><div class="x-axis"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div></div></article>
+        <article class="panel activity-panel"><div class="panel-heading"><div><p class="eyebrow">Live feed</p><h2>Recent activity</h2></div><button class="text-button">View all ↗</button></div><div class="activity-list"><div class="activity-item"><div class="activity-avatar violet">JS</div><div><strong>Jordan Smith</strong><p>Placed a new order <b>#ORD-2849</b></p><small>2 minutes ago</small></div><span class="activity-amount">+$240.00</span></div><div class="activity-item"><div class="activity-avatar peach">ER</div><div><strong>Emma Roberts</strong><p>Signed up as a new customer</p><small>18 minutes ago</small></div><span class="activity-status">New</span></div><div class="activity-item"><div class="activity-avatar mint">MW</div><div><strong>Mike Wilson</strong><p>Placed a new order <b>#ORD-2848</b></p><small>42 minutes ago</small></div><span class="activity-amount">+$89.00</span></div><div class="activity-item"><div class="activity-avatar blue-bg">OL</div><div><strong>Olivia Lee</strong><p>Requested a refund for <b>#ORD-2839</b></p><small>1 hour ago</small></div><span class="activity-status refund">Review</span></div></div></article>
+      </section>
+
+      <section class="bottom-grid" id="reports"><article class="panel performance-panel"><div class="panel-heading"><div><p class="eyebrow">Your targets</p><h2>Performance metrics</h2></div><button class="more-button" aria-label="More performance options">•••</button></div><div class="performance-row"><div class="progress-chart"><div class="progress-ring"><span>82<small>%</small></span></div><div><strong>Overall score</strong><p>Great work this month!</p></div></div><div class="goal-list"><div><span>Revenue target</span><strong>$128.4k <small>/ $150k</small></strong><div class="progress"><i style="width:86%"></i></div></div><div><span>Customer growth</span><strong>8,249 <small>/ 10k</small></strong><div class="progress yellow-progress"><i style="width:74%"></i></div></div></div></div></article><article class="panel top-products" id="orders"><div class="panel-heading"><div><p class="eyebrow">Best sellers</p><h2>Top products</h2></div><button class="text-button">View report ↗</button></div><div class="product-table"><div class="product-row table-head"><span>Product</span><span>Sales</span><span>Revenue</span></div><div class="product-row"><span><i class="product-thumb coral">A</i>Air Max 270</span><b>284</b><strong>$24,360</strong></div><div class="product-row"><span><i class="product-thumb sky">S</i>Classic Hoodie</span><b>216</b><strong>$12,960</strong></div><div class="product-row"><span><i class="product-thumb gold">C</i>Canvas Backpack</span><b>189</b><strong>$9,450</strong></div></div></article></section>
+      <footer>© 2026 Northstar Analytics <span>All systems operational <i></i></span></footer>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
